@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resa Maulani - Software Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Resa Maulani - D3 Informatics Engineering student experienced in system requirements analysis, database optimization, and full-stack development.">
+
+    <!-- Open Graph / LinkedIn / WhatsApp preview -->
+    <!-- NOTE: replace https://your-domain.com below with your actual hosted URL once deployed -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:title" content="Resa Maulani - Software Developer Portfolio">
+    <meta property="og:description" content="D3 Informatics Engineering student experienced in system requirements analysis, database optimization, and full-stack development (Laravel, Flutter, MySQL).">
+    <meta property="og:image" content="https://your-domain.com/images/foto.jpeg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Resa Maulani - Software Developer Portfolio">
+    <meta name="twitter:description" content="D3 Informatics Engineering student experienced in system requirements analysis, database optimization, and full-stack development (Laravel, Flutter, MySQL).">
+    <meta name="twitter:image" content="https://your-domain.com/images/foto.jpeg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css" id="darkModeStyle" disabled>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Resa Maulani</a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-controls">
+                <button id="languageToggle" class="control-btn" aria-label="Toggle language">
+                    <i class="fas fa-language"></i> <span>EN</span>
+                </button>
+                <button id="darkModeToggle" class="control-btn" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i> <span>Dark</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <main class="container">
+        <section id="about" class="section">
+            <div class="profile-header">
+                <div class="profile-image-container">
+                    <img src="images/foto.jpeg" alt="Resa Maulani" class="profile-image" id="profileImage">
+                    <div class="image-hover-effect"></div>
+                </div>
+                <div class="profile-info">
+                    <h1>Resa Maulani</h1>
+                    <h2 class="en">Database & Systems Analyst | Laravel Developer</h2>
+                    <h2 class="id" style="display:none">Analis Database & Sistem | Laravel Developer</h2>
+                    <div class="social-links">
+                        <a href="https://github.com/ecamln14" class="social-link" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/resa-maulani-793585361/" class="social-link" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/ecamln_/" class="social-link" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:mmaulaniiir@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <a href="downloads/cv.pdf" download class="btn download-cv">
+                        <i class="fas fa-download"></i>
+                        <span class="en">Download CV</span>
+                        <span class="id" style="display:none">Unduh CV</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <h3><i class="fas fa-user"></i> <span class="en">About Me</span><span class="id" style="display:none">Tentang Saya</span></h3>
+                <p class="en">D3 Informatics Engineering student (GPA 3.81/4.00) with hands-on experience in system requirements analysis, technical documentation, application troubleshooting, and database optimization. Comfortable coordinating across teams and conducting user-needs interviews to support the development and rollout of information systems. Skilled in SQL, with a problem-solving mindset and a strong drive to keep learning.</p>
+                <p class="id" style="display:none">Mahasiswa D3 Teknik Informatika (IPK 3,81/4,00) dengan pengalaman nyata dalam analisis kebutuhan sistem, penyusunan dokumentasi teknis, troubleshooting aplikasi, dan optimasi database. Terbiasa berkoordinasi lintas tim dan melakukan wawancara kebutuhan pengguna untuk mendukung pengembangan dan implementasi sistem informasi. Memiliki kemampuan query SQL, problem solving mindset, dan semangat belajar tinggi.</p>
+
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label en">Name</span>
+                        <span class="info-label id" style="display:none">Nama</span>
+                        <span class="info-value">Resa Maulani</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label en">Email</span>
+                        <span class="info-label id" style="display:none">Email</span>
+                        <span class="info-value">mmaulaniiir@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label en">Phone</span>
+                        <span class="info-label id" style="display:none">Telepon</span>
+                        <span class="info-value">0858 6485 4838</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label en">Location</span>
+                        <span class="info-label id" style="display:none">Lokasi</span>
+                        <span class="info-value">Bandung, Jawa Barat</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h3><i class="fas fa-graduation-cap"></i> <span class="en">Education</span><span class="id" style="display:none">Pendidikan</span></h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Oct 2023 - Oct 2026</div>
+                    <div class="timeline-content">
+                        <h4>Universitas Sangga Buana - Kota Bandung, Jawa Barat</h4>
+                        <p class="en">Diploma in Informatics Engineering (D3) - GPA 3.81/4.00</p>
+                        <p class="id" style="display:none">Diploma Teknik Informatika (D3) - IPK 3,81/4,00</p>
+                        <p class="status en">Expected graduation: October 2026</p>
+                        <p class="status id" style="display:none">Perkiraan lulus: Oktober 2026</p>
+                        <ul class="experience-details">
+                            <li class="en">Active in information system development projects and user-needs analysis</li>
+                            <li class="id" style="display:none">Aktif dalam proyek pengembangan sistem informasi dan analisis kebutuhan pengguna</li>
+                            <li class="en">Core coursework: databases, software engineering, and object-oriented programming</li>
+                            <li class="id" style="display:none">Mengikuti mata kuliah inti seperti basis data, rekayasa perangkat lunak, dan pemrograman berorientasi objek</li>
+                            <li class="en">Completed a group capstone project building web and mobile apps with Laravel and Flutter</li>
+                            <li class="id" style="display:none">Menyelesaikan proyek akhir/tugas kelompok berbasis pengembangan aplikasi web dan mobile menggunakan framework Laravel dan Flutter</li>
+                            <li class="en">Self-studied additional material via Dicoding and Google Cloud Skill Boost to strengthen software development and cloud computing skills</li>
+                            <li class="id" style="display:none">Aktif mempelajari materi tambahan di luar kelas melalui platform seperti Dicoding dan Google Cloud Skill Boost untuk memperkuat kompetensi di bidang software development dan cloud computing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h3><i class="fas fa-briefcase"></i> <span class="en">Work Experience</span><span class="id" style="display:none">Pengalaman Kerja</span></h3>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h4>PT Rekhindo Pratama</h4>
+                        <span class="experience-date">Sep 2025 - Jan 2026</span>
+                    </div>
+                    <div class="experience-company"><span class="en">Internship</span><span class="id" style="display:none">Internship</span> - Bandung, Indonesia</div>
+                    <ul class="experience-details">
+                        <li class="en">Conducted user-needs interviews to understand corporate and self-paced training flows, documenting them into an SKPL (software requirements spec)</li>
+                        <li class="id" style="display:none">Melakukan wawancara kebutuhan pengguna untuk memahami alur pelatihan corporate dan mandiri, lalu mendokumentasikannya ke dalam SKPL</li>
+                        <li class="en">Iteratively designed the database schema (ERD), covering adjustments to 5+ related tables as business needs evolved</li>
+                        <li class="id" style="display:none">Merancang skema database (ERD) secara iteratif, mencakup penyesuaian 5+ tabel relasi mengikuti perubahan kebutuhan bisnis</li>
+                        <li class="en">Prepared 4 types of UML documentation as a development reference, including a case study on last-minute training quota additions</li>
+                        <li class="id" style="display:none">Menyusun 4 jenis dokumentasi UML sebagai acuan pengembangan sistem, termasuk studi kasus penambahan kuota pelatihan mendadak</li>
+                        <li class="en">Built CRUD features with Laravel and supported UAT by identifying bugs before the system reached end users</li>
+                        <li class="id" style="display:none">Membangun fitur CRUD dengan Laravel dan mendukung UAT dengan mengidentifikasi bug pada sistem sebelum digunakan end user</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h4>PT. Digimandala (DTH-ID)</h4>
+                        <span class="experience-date">Sep 2025 - Dec 2025</span>
+                    </div>
+                    <div class="experience-company"><span class="en">Freelance</span><span class="id" style="display:none">Freelance</span> - Bandung, Indonesia</div>
+                    <ul class="experience-details">
+                        <li class="en">Involved in implementing a training management system covering 10+ entities (user, role, training packages, transactions, attendance, certificates) from development through production release</li>
+                        <li class="id" style="display:none">Terlibat dalam implementasi sistem manajemen pelatihan mencakup 10+ entitas (user, role, paket pelatihan, transaksi, absensi, sertifikat) dari development hingga rilis produksi</li>
+                        <li class="en">Integrated the Midtrans (Snap API) payment gateway for online payments, including automatic webhook notification validation</li>
+                        <li class="id" style="display:none">Mengintegrasikan payment gateway Midtrans (Snap API) untuk pembayaran online, termasuk validasi notifikasi webhook secara otomatis</li>
+                        <li class="en">Handled troubleshooting and resolution of 20+ system issues; administered role-permissions and user access rights</li>
+                        <li class="id" style="display:none">Menangani troubleshooting dan penyelesaian 20+ issue pada sistem; mengadministrasi role-permission dan hak akses pengguna</li>
+                        <li class="en">Ensured smooth integration between system modules and thoroughly documented the technical process flow</li>
+                        <li class="id" style="display:none">Memastikan integrasi antar modul sistem berjalan lancar dan mendokumentasikan alur proses teknis secara menyeluruh</li>
+                        <li class="en">Ran 20 Black Box Testing scenarios to validate system functions before handoff to the production team</li>
+                        <li class="id" style="display:none">Menjalankan 20 skenario Black Box Testing untuk memvalidasi fungsi sistem sebelum diserahkan ke tim produksi</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h4>Lendeng</h4>
+                        <span class="experience-date">Feb 2026 - Mar 2026</span>
+                    </div>
+                    <div class="experience-company"><span class="en">Freelance</span><span class="id" style="display:none">Freelance</span> - Bandung, Indonesia</div>
+                    <ul class="experience-details">
+                        <li class="en">Analyzed business needs and built a multi-chapter membership management system: registration flow, approval, document management, and data validation</li>
+                        <li class="id" style="display:none">Menganalisis kebutuhan bisnis dan membangun sistem manajemen anggota multi-chapter: alur pendaftaran, persetujuan, manajemen dokumen, dan validasi data</li>
+                        <li class="en">Developed a QR code feature for real-time member data checks with chapter-based access validation</li>
+                        <li class="id" style="display:none">Mengembangkan fitur QR code untuk pengecekan data anggota secara real-time dengan validasi akses berbasis sistem chapter</li>
+                        <li class="en">Handled 60+ fix and feature-development tasks (bug fixing, UI/UX revisions, database structure adjustments) based on client feedback</li>
+                        <li class="id" style="display:none">Menangani 60+ task perbaikan dan pengembangan fitur (bug fixing, revisi UI/UX, penyesuaian struktur database) berdasarkan feedback klien</li>
+                        <li class="en">Implemented Role-Based Access Control (RBAC) with a multi-role scheme (central admin & chapter admin) to restrict data access</li>
+                        <li class="id" style="display:none">Mengimplementasikan Role-Based Access Control (RBAC) dengan skema multi-role user (admin pusat & admin chapter) untuk membatasi akses data</li>
+                        <li class="en">Created business process flows and system documentation for use as the team's operational guide</li>
+                        <li class="id" style="display:none">Membuat flow proses bisnis dan dokumentasi sistem untuk digunakan sebagai panduan operasional tim</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h4>BUMDes (idesa)</h4>
+                        <span class="experience-date">Apr 2025 - May 2025</span>
+                    </div>
+                    <div class="experience-company"><span class="en">Freelance</span><span class="id" style="display:none">Freelance</span> - Bandung, Indonesia</div>
+                    <ul class="experience-details">
+                        <li class="en">Audited the BUMDes application's database structure, covering 66 village data tables, to identify improvement opportunities</li>
+                        <li class="id" style="display:none">Mengaudit struktur database aplikasi BUMDes yang mencakup 66 tabel data desa untuk identifikasi potensi perbaikan</li>
+                        <li class="en">Optimized 49 custom SQL queries using phpMyAdmin & DBeaver to improve system performance and efficiency</li>
+                        <li class="id" style="display:none">Mengoptimalkan 49 custom query SQL menggunakan phpMyAdmin & DBeaver untuk meningkatkan performa dan efisiensi sistem</li>
+                        <li class="en">Coordinated with the lead developer to validate the structure of 8 tables related to the "Village Billing" feature</li>
+                        <li class="id" style="display:none">Berkoordinasi dengan 1 developer utama untuk validasi struktur 8 tabel terkait fitur "Tagihan Desa"</li>
+                        <li class="en">Prepared periodic technical documentation of system fixes to hand off to the lead developer for further work</li>
+                        <li class="id" style="display:none">Menyusun dokumentasi teknis hasil perbaikan sistem secara berkala untuk diserahkan ke developer utama sebagai bahan lanjutan</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="organization" class="section">
+            <h3><i class="fas fa-people-group"></i> <span class="en">Organizational Experience</span><span class="id" style="display:none">Pengalaman Organisasi</span></h3>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h4><span class="en">Academic Assistant</span><span class="id" style="display:none">Asisten Akademik</span></h4>
+                        <span class="experience-date">Jan 2024 - Feb 2024</span>
+                    </div>
+                    <div class="experience-company">Universitas Sangga Buana YPKP - Bandung, Indonesia</div>
+                    <ul class="experience-details">
+                        <li class="en">Managed and organized lecturers' academic documents to support the study program's accreditation process</li>
+                        <li class="id" style="display:none">Mengelola dan menata dokumen akademik dari beberapa dosen untuk mendukung proses akreditasi program studi</li>
+                        <li class="en">Migrated and organized 100+ lecturer journals into the faculty's digital repository</li>
+                        <li class="id" style="display:none">Memindahkan dan mengelompokkan 100+ jurnal dosen ke repositori digital fakultas</li>
+                        <li class="en">Coordinated with lecturers and the administration team to fulfill campus accreditation data requirements</li>
+                        <li class="id" style="display:none">Berkoordinasi dengan dosen dan tim administrasi untuk memenuhi kebutuhan data akreditasi kampus</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h4><span class="en">Treasurer</span><span class="id" style="display:none">Bendahara</span></h4>
+                        <span class="experience-date">Jul 2025 - Sep 2025</span>
+                    </div>
+                    <div class="experience-company"><span class="en">Karang Taruna RW Youth Organization</span><span class="id" style="display:none">Organisasi Karang Taruna RW</span> - Kota Bandung, Indonesia</div>
+                    <ul class="experience-details">
+                        <li class="en">Responsible for recording and managing youth activity funds for the RW neighborhood over a 3-month event period</li>
+                        <li class="id" style="display:none">Bertanggung jawab mencatat dan mengelola kas kegiatan pemuda di lingkungan RW selama 3 bulan masa acara</li>
+                        <li class="en">Prepared 3 monthly financial reports for transparency on social activity and inter-neighborhood competition funds</li>
+                        <li class="id" style="display:none">Menyusun 3 laporan keuangan bulanan untuk transparansi penggunaan dana kegiatan sosial dan lomba antar warga</li>
+                        <li class="en">Coordinated with the chairperson and 10+ members on budget planning and event fund usage</li>
+                        <li class="id" style="display:none">Berkoordinasi dengan ketua dan 10+ anggota organisasi terkait perencanaan anggaran dan penggunaan dana acara</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h3><i class="fas fa-code"></i> <span class="en">Skills</span><span class="id" style="display:none">Keahlian</span></h3>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4 class="en">Database & Backend</h4>
+                    <h4 class="id" style="display:none">Database & Backend</h4>
+                    <div class="skill-item" style="display:block;margin-bottom:14px">
+                        <span class="skill-name" style="font-weight:700">MySQL</span>
+                        <div class="en" style="font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Used in Digimandala, Lendeng, TrackInventori, BUMDes audit</div>
+                        <div class="id" style="display:none;font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Dipakai di Digimandala, Lendeng, TrackInventori, audit BUMDes</div>
+                    </div>
+                    <div class="skill-item" style="display:block;margin-bottom:14px">
+                        <span class="skill-name" style="font-weight:700">Laravel (PHP)</span>
+                        <div class="en" style="font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Used in Digimandala, Lendeng, and PT Rekhindo Pratama internship</div>
+                        <div class="id" style="display:none;font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Dipakai di Digimandala, Lendeng, dan internship PT Rekhindo Pratama</div>
+                    </div>
+                    <div class="skill-item" style="display:block;margin-bottom:14px">
+                        <span class="skill-name" style="font-weight:700">PostgreSQL</span>
+                        <div class="en" style="font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Academic coursework</div>
+                        <div class="id" style="display:none;font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Mata kuliah basis data</div>
+                    </div>
+                    <div class="skill-item" style="display:block">
+                        <span class="skill-name" style="font-weight:700">Firebase Firestore</span>
+                        <div class="en" style="font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Academic & personal projects</div>
+                        <div class="id" style="display:none;font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Proyek akademik & pribadi</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4 class="en">Mobile & Design</h4>
+                    <h4 class="id" style="display:none">Mobile & Desain</h4>
+                    <div class="skill-item" style="display:block;margin-bottom:14px">
+                        <span class="skill-name" style="font-weight:700">Flutter</span>
+                        <div class="en" style="font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Used in Digimandala (thesis project) and a To-Do List practice app</div>
+                        <div class="id" style="display:none;font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Dipakai di Digimandala (proyek TA) dan aplikasi latihan To-Do List</div>
+                    </div>
+                    <div class="skill-item" style="display:block;margin-bottom:14px">
+                        <span class="skill-name" style="font-weight:700">React Native</span>
+                        <div class="en" style="font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Used in Lendeng</div>
+                        <div class="id" style="display:none;font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Dipakai di Lendeng</div>
+                    </div>
+                    <div class="skill-item" style="display:block">
+                        <span class="skill-name" style="font-weight:700">Figma (UI/UX)</span>
+                        <div class="en" style="font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Wireframing & UI design for personal and academic projects</div>
+                        <div class="id" style="display:none;font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Wireframing & desain UI untuk proyek pribadi dan akademik</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4 class="en">Tools & Cloud</h4>
+                    <h4 class="id" style="display:none">Tools & Cloud</h4>
+                    <div class="skill-item" style="display:block;margin-bottom:14px">
+                        <span class="skill-name" style="font-weight:700">Git & REST API</span>
+                        <div class="en" style="font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Used across all listed projects</div>
+                        <div class="id" style="display:none;font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Dipakai di semua proyek yang tercantum</div>
+                    </div>
+                    <div class="skill-item" style="display:block;margin-bottom:14px">
+                        <span class="skill-name" style="font-weight:700">phpMyAdmin & DBeaver</span>
+                        <div class="en" style="font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Used in the BUMDes database audit (49 queries optimized)</div>
+                        <div class="id" style="display:none;font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Dipakai di audit database BUMDes (49 query dioptimasi)</div>
+                    </div>
+                    <div class="skill-item" style="display:block;margin-bottom:14px">
+                        <span class="skill-name" style="font-weight:700">Midtrans (Payment Gateway)</span>
+                        <div class="en" style="font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Used in Digimandala (Snap API integration)</div>
+                        <div class="id" style="display:none;font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Dipakai di Digimandala (integrasi Snap API)</div>
+                    </div>
+                    <div class="skill-item" style="display:block">
+                        <span class="skill-name" style="font-weight:700">Google Cloud</span>
+                        <div class="en" style="font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Skill Boost coursework & certifications (see below)</div>
+                        <div class="id" style="display:none;font-size:12.5px;color:var(--text-secondary,#6b7280);margin-top:3px">Materi Skill Boost & sertifikasi (lihat di bawah)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-content" style="margin-top: 2.5rem;">
+                <h4><i class="fas fa-medal"></i> <span class="en">Certifications & Achievements</span><span class="id" style="display:none">Sertifikasi & Prestasi</span></h4>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">2025</span>
+                        <span class="info-value"><a href="https://www.credly.com/badges/8b8e1be9-3423-40ac-9209-20f9ab8e1258/public_url" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1px dashed currentColor">Google Cloud Computing Foundations Certificate <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75em"></i></a></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">2025</span>
+                        <span class="info-value"><a href="https://www.credly.com/badges/ec534fe2-f6a3-4547-abaf-c939359fc6b3/public_url" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1px dashed currentColor">Prepare Data for ML APIs on Google Cloud Skill Badge <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75em"></i></a></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">2025</span>
+                        <span class="info-value"><a href="https://www.credly.com/badges/30eb3b9f-130f-4e61-8b06-d7f26dd849ed/public_url" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1px dashed currentColor">Build a Secure Google Cloud Network <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75em"></i></a></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">2025</span>
+                        <span class="info-value"><a href="https://www.credly.com/badges/8eff3520-6312-4cbc-8b22-6efc87ae258d/public_url" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1px dashed currentColor">Implement Load Balancing on Compute Engine Skill Badge <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75em"></i></a></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">2025</span>
+                        <span class="info-value"><a href="https://www.credly.com/badges/8aec16e4-6acf-423f-bc52-d09877b4fcfc/public_url" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1px dashed currentColor">Scrum Foundation Learner <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75em"></i></a></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">2026</span>
+                        <span class="info-value"><a href="https://www.credly.com/badges/9af79cbe-3df4-483a-9062-5abd5ec171dd/public_url" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1px dashed currentColor">Set Up an App Dev Environment on Google Cloud Skill Badge <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75em"></i></a></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">2025</span>
+                        <span class="info-value en">Getting Started with Java Programming</span>
+                        <span class="info-value id" style="display:none">Memulai Pemrograman dengan Java</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">2026</span>
+                        <span class="info-value"><a href="https://www.dicoding.com/certificates/L4PQ9MGM2PO1" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1px dashed currentColor"><span class="en">Getting Started with C Programming</span><span class="id" style="display:none">Memulai Pemrograman dengan C</span> <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75em"></i></a></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">2025</span>
+                        <span class="info-value"><a href="https://www.dicoding.com/certificates/2VX357MWJPYQ" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1px dashed currentColor"><span class="en">Learning SOLID Programming Principles</span><span class="id" style="display:none">Belajar Prinsip Pemrograman SOLID</span> <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75em"></i></a></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">2026</span>
+                        <span class="info-value"><a href="https://www.dicoding.com/certificates/KEXLQ49EWPG2" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1px dashed currentColor"><span class="en">Learning Project Management Basics</span><span class="id" style="display:none">Belajar Dasar Manajemen Proyek</span> <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75em"></i></a></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h3><i class="fas fa-project-diagram"></i> <span class="en">Featured Projects</span><span class="id" style="display:none">Proyek Unggulan</span></h3>
+            <p class="en" style="max-width:700px;">Real projects built for clients during freelance and internship work, plus a personal inventory & POS system.</p>
+            <p class="id" style="display:none; max-width:700px;">Proyek nyata yang dikerjakan untuk klien selama freelance dan magang, plus sistem inventori & kasir pribadi.</p>
+
+            <div class="featured-projects-grid">
+                <!-- Digimandala Case Study -->
+                <div class="featured-project-card" data-project="digimandala">
+                    <img class="featured-project-thumb" src="images/projects/digimandala/admin-login.png" alt="DTH.ID Admin Panel Login">
+                    <div class="featured-project-content">
+                        <h4>Training Management System</h4>
+                        <div class="featured-project-role">PT. Digimandala (DTH.ID) - Sep 2025 - Dec 2025</div>
+                        <p class="en">Mobile training administration app with Midtrans payment gateway, built as my undergraduate thesis.</p>
+                        <p class="id" style="display:none">Aplikasi administrasi pelatihan mobile dengan payment gateway Midtrans, diangkat sebagai Tugas Akhir.</p>
+                        <p class="en" style="font-size:12.5px;color:var(--text-secondary,#6b7280);font-style:italic;margin-top:-4px">System was confirmed working and accepted by the client (DTH.ID) prior to final payment.</p>
+                        <p class="id" style="display:none;font-size:12.5px;color:var(--text-secondary,#6b7280);font-style:italic;margin-top:-4px">Sistem sudah dikonfirmasi berjalan dan diterima klien (DTH.ID) sebelum pembayaran akhir dilakukan.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Midtrans API</span>
+                        </div>
+                        <div class="view-case-study">
+                            <span class="en">View Case Study</span><span class="id" style="display:none">Lihat Detail</span> <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lendeng Case Study -->
+                <div class="featured-project-card" data-project="lendeng">
+                    <img class="featured-project-thumb" src="images/projects/lendeng/login.png" alt="Lendeng App admin login screen">
+                    <div class="featured-project-content">
+                        <h4>Multi-Chapter Membership System</h4>
+                        <div class="featured-project-role">Lendeng - Feb 2026 - Mar 2026</div>
+                        <p class="en">React Native membership management app with QR verification and role-based access across chapters.</p>
+                        <p class="id" style="display:none">Aplikasi manajemen keanggotaan React Native dengan verifikasi QR dan akses berbasis peran lintas chapter.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">RBAC</span>
+                        </div>
+                        <div class="view-case-study">
+                            <span class="en">View Case Study</span><span class="id" style="display:none">Lihat Detail</span> <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TrackInventori Case Study -->
+                <div class="featured-project-card" data-project="trackinventori">
+                    <img class="featured-project-thumb" src="images/projects/trackinventori/login.png" alt="TrackInventori login screen">
+                    <div class="featured-project-content">
+                        <h4>Inventory & POS System</h4>
+                        <div class="featured-project-role">TrackInventori - Personal Project - 2026</div>
+                        <p class="en">Inventory and point-of-sale system with QR-scan checkout, stock tracking, and a filterable, exportable transaction report.</p>
+                        <p class="id" style="display:none">Sistem inventori & kasir dengan checkout scan QR, pelacakan stok, serta laporan transaksi yang bisa difilter dan diunduh.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">QR Code</span>
+                        </div>
+                        <div class="project-links" style="margin-bottom:10px">
+                            <a href="https://github.com/ecamln14/inventory-phpNative-WithScanQR" target="_blank" class="project-link" onclick="event.stopPropagation()">
+                                <i class="fab fa-github"></i> <span class="en">View Code</span><span class="id" style="display:none">Lihat Kode</span>
+                            </a>
+                        </div>
+                        <div class="view-case-study">
+                            <span class="en">View Case Study</span><span class="id" style="display:none">Lihat Detail</span> <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BUMDes Case Study -->
+                <div class="featured-project-card" data-project="bumdes">
+                    <img class="featured-project-thumb" src="images/projects/bumdes/db-audit-visual.svg" alt="BUMDes database audit stats: 66 tables audited, 49 queries optimized">
+                    <div class="featured-project-content">
+                        <h4>Database Audit & Optimization</h4>
+                        <div class="featured-project-role">BUMDes (idesa) - Apr 2025 - May 2025</div>
+                        <p class="en">Structural audit and query optimization for a village-enterprise application.</p>
+                        <p class="id" style="display:none">Audit struktur dan optimasi query untuk aplikasi BUMDes.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">phpMyAdmin</span>
+                            <span class="tech-tag">DBeaver</span>
+                        </div>
+                        <div class="view-case-study">
+                            <span class="en">View Case Study</span><span class="id" style="display:none">Lihat Detail</span> <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="practice-projects" class="section">
+            <h3><i class="fas fa-code-branch"></i> <span class="en">Practice Projects</span><span class="id" style="display:none">Proyek Latihan</span></h3>
+            <p class="en" style="max-width:700px;">Personal repos used to practice specific frameworks and concepts.</p>
+            <p class="id" style="display:none; max-width:700px;">Repo pribadi untuk latihan framework dan konsep tertentu.</p>
+            <div class="projects-grid">
+                <!-- Personal Blog Project -->
+                <div class="project-card">
+                    <div class="project-image" style="display:flex;align-items:center;justify-content:center;height:160px;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;font-size:38px">
+                        <i class="fas fa-blog" aria-hidden="true"></i>
+                    </div>
+                    <div class="project-content">
+                        <h4>Personal Blog</h4>
+                        <p class="en">A personal blog website with content management</p>
+                        <p class="id" style="display:none">Website blog pribadi dengan manajemen konten</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ecamln14/ecamln_blog" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> <span class="en">View Code</span><span class="id" style="display:none">Lihat Kode</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laravel CRUD Project -->
+                <div class="project-card">
+                    <div class="project-image" style="display:flex;align-items:center;justify-content:center;height:160px;background:linear-gradient(135deg,#dc2626,#ea580c);color:#fff;font-size:38px">
+                        <i class="fas fa-layer-group" aria-hidden="true"></i>
+                    </div>
+                    <div class="project-content">
+                        <h4>Laravel CRUD</h4>
+                        <p class="en">Simple CRUD application with Laravel framework</p>
+                        <p class="id" style="display:none">Aplikasi CRUD sederhana dengan framework Laravel</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ecamln14/crud-laravel-sederhana" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> <span class="en">View Code</span><span class="id" style="display:none">Lihat Kode</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Ordering Web App -->
+                <div class="project-card">
+                    <div class="project-image" style="display:flex;align-items:center;justify-content:center;height:160px;background:linear-gradient(135deg,#059669,#10b981);color:#fff;font-size:38px">
+                        <i class="fas fa-utensils" aria-hidden="true"></i>
+                    </div>
+                    <div class="project-content">
+                        <h4>Food Ordering System</h4>
+                        <p class="en">Web-based food ordering application with Laravel</p>
+                        <p class="id" style="display:none">Aplikasi pemesanan makanan berbasis web dengan Laravel</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ecamln14/web-pemesanan-makanan-laravel" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> <span class="en">View Code</span><span class="id" style="display:none">Lihat Kode</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- To-Do List Mobile App -->
+                <div class="project-card">
+                    <div class="project-image" style="display:flex;align-items:center;justify-content:center;height:160px;background:linear-gradient(135deg,#0891b2,#0ea5e9);color:#fff;font-size:38px">
+                        <i class="fas fa-list-check" aria-hidden="true"></i>
+                    </div>
+                    <div class="project-content">
+                        <h4>To-Do List App</h4>
+                        <p class="en">Mobile application for task management with Flutter</p>
+                        <p class="id" style="display:none">Aplikasi mobile untuk manajemen tugas dengan Flutter</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ecamln14/ToDoList-Mobile" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> <span class="en">View Code</span><span class="id" style="display:none">Lihat Kode</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RecyclerView Image App -->
+                <div class="project-card">
+                    <div class="project-image" style="display:flex;align-items:center;justify-content:center;height:160px;background:linear-gradient(135deg,#7c3aed,#c026d3);color:#fff;font-size:38px">
+                        <i class="fas fa-images" aria-hidden="true"></i>
+                    </div>
+                    <div class="project-content">
+                        <h4>RecyclerView Image</h4>
+                        <p class="en">Android app demonstrating RecyclerView with images</p>
+                        <p class="id" style="display:none">Aplikasi Android demonstrasi RecyclerView dengan gambar</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Android</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ecamln14/recyclerview-image" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> <span class="en">View Code</span><span class="id" style="display:none">Lihat Kode</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h3><i class="fas fa-envelope"></i> <span class="en">Contact</span><span class="id" style="display:none">Kontak</span></h3>
+            <div class="contact-container">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/myzjdkda" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="en">Name</label>
+                        <label for="name" class="id" style="display:none">Nama</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="en">Email</label>
+                        <label for="email" class="id" style="display:none">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="en">Message</label>
+                        <label for="message" class="id" style="display:none">Pesan</label>
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <input type="hidden" name="_subject" value="New portfolio message!">
+                    <button type="submit" class="btn submit-btn">
+                        <span class="en">Send Message</span>
+                        <span class="id" style="display:none">Kirim Pesan</span>
+                    </button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>mmaulaniiir@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>0858 6485 4838</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bandung, Jawa Barat</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/resa-maulani-793585361/" target="_blank">linkedin.com/in/resa-maulani-793585361</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Resa Maulani. <span class="en">All rights reserved.</span><span class="id" style="display:none">Hak cipta dilindungi.</span></p>
+            <div class="footer-links">
+                <a href="#" class="footer-link en">Privacy Policy</a>
+                <a href="#" class="footer-link id" style="display:none">Kebijakan Privasi</a>
+                <a href="#" class="footer-link en">Terms of Service</a>
+                <a href="#" class="footer-link id" style="display:none">Syarat Layanan</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Project Case Study Modal -->
+    <div id="projectModal" class="project-modal-overlay">
+        <div class="project-modal-box">
+            <span class="project-modal-close" id="projectModalClose">&times;</span>
+            <div class="project-modal-body" id="projectModalBody">
+                <!-- Populated by JS based on data-project attribute -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/dark-mode.js"></script>
+    <script src="js/language-toggle.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/particles.js"></script>
+</body>
+</html>
